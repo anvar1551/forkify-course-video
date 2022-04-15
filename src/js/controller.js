@@ -78,7 +78,6 @@ const controllServings = function(newServings) {
   model.updateServings(newServings);
 
   // Update the recipe view 
-  //  recipeView.render(model.state.recipe); 
    recipeView.update(model.state.recipe); 
 };
 
@@ -127,10 +126,6 @@ const controllAddRecipe = async function(newRecipe) {
   }
 };
 
-const newFeature = function() {
-  console.log('Welcome to the application');
-}
-
 const init = function() {
   bookmarksView.addHandlerRender(controllBookmarks);
   recipeView.addHandlerRender(controllRecipes);
@@ -139,7 +134,6 @@ const init = function() {
   searchView.addHandlerSearch(controllSearchResults);
   paginationView.addHandlerClick(controllPagination);
   addRecipeView.addHandlerUpload(controllAddRecipe);
- newFeature();
 };
 
 init();
